@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id = "demo"></h3>
+
+<script>
+
+    let myNumber = prompt("Nhập vào 1 số:");
+    let myNumberArray = myNumber.split("")
+
+    for (let i = 1; i < myNumberArray.length; i++) {
+        let num1 = parseInt(myNumberArray[i-1]);
+        let num2 = parseInt(myNumberArray[i]);
+        if ((num1 %2 ==0) && (num2 %2 ==0)) {
+           myNumberArray.splice(i, 0, "-");
+        }
+    }
+    myNumberString = myNumberArray.join("");
+
+    document.getElementById("demo").innerHTML = myNumberString;
+</script>
+
+</body>
+</html>
